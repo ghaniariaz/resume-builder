@@ -6,6 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const puppeteer_1 = __importDefault(require("puppeteer"));
 const router = (0, express_1.Router)();
+router.get('/status', (req, res) => {
+    res.json({ status: "alive" });
+});
 router.post('/', async (req, res) => {
     const { name, about, skills, experience, education, projects } = req.body;
     const htmlContent = `
