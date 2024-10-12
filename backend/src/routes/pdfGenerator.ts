@@ -3,10 +3,6 @@ import puppeteer from 'puppeteer';
 
 const router = Router();
 
-router.get('/status', (req, res) => {
-    res.json({ status: "alive" });
-  });
-
 router.post('/', async (req, res) => {
   const { name, about, skills, experience, education, projects } = req.body;
 

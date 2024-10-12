@@ -9,6 +9,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => {
+    res.json({ status: "alive" });
+});
+  
 app.use('/generate-pdf', pdfGeneratorRouter);
 
 // Start server
